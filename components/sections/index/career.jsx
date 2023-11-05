@@ -1,18 +1,18 @@
 // Core packages
-import Image from 'next/image'
+import Image from "next/image";
 
-import Badges 		from '../../utils/badge.list.util'
+import Badges from "../../utils/badge.list.util";
 
 // Section structure
-import Section from '../../structure/section';
-import Container from '../../structure/container';
+import Section from "../../structure/section";
+import Container from "../../structure/container";
 
 // Section general blocks
-import SectionTitle from '../../blocks/section.title.block'
-import SectionGridBg from '../../blocks/section.grid.block'
+import SectionTitle from "../../blocks/section.title.block";
+import SectionGridBg from "../../blocks/section.grid.block";
 
 // Career scss
-import career from '../../../styles/sections/index/career.module.scss'
+import career from "../../../styles/sections/index/career.module.scss";
 
 /**
  * Section: Career
@@ -20,172 +20,310 @@ import career from '../../../styles/sections/index/career.module.scss'
  * @returns {jsx} <Career />
  */
 export default function Career() {
-	return (
-		<Section classProp={`${career.section} borderBottom`}>
-			<Container spacing={['verticalXXXLrg']}>
-				<SectionTitle
-					title="Experience"
-					preTitle="Career"
-					subTitle="I am current managing, designing, and developing all consumer and digital product initiatives at My Supply Co."
-				/>
-				<section className={career.area}>
-					<article className={career.company}>
-						<div className={career.companyContent}>
-							<span className={career.companyHeader}>
-								<h3>My Supply Co.</h3>
-								<h4>Permanent Full-time</h4>
-								<h4>Apr 2019 - Present · 3 yrs 10 mos</h4>
-								<h5>Vancouver, British Columbia, Canada</h5>
-							</span>
-							<p>
-							My Supply Co. helps Canadians manage mental and physical health with naturally occurring nootropic and adaptogenic products. They carry products with complex attributes, aiming to solve a large variety of personal care needs — this requires an extremely customized and evolving approach to how the store is built and functions.
-							</p>
-						</div>
-						<div className={career.companyAlt}></div>
-					</article>
+  return (
+    <Section classProp={`${career.section} borderBottom`}>
+      <Container spacing={["verticalXXXLrg"]}>
+        <SectionTitle
+          title="Experience"
+          preTitle="Career"
+          subTitle="I am currently pursuing my Master's degree and working as a part-time Teaching Assistant at Thammasat University, while also managing the development at Impressions."
+        />
+        <section className={career.area}>
+          <article className={career.company}>
+            <div className={career.companyContent}>
+              <span className={career.companyHeader}>
+                <h3>Accenture</h3>
+                {/* <h4>Internship</h4> */}
+                <h4>June 2021 - Aug 2021 · 3 mos</h4>
+                <h5>Bangkok, Thailand</h5>
+              </span>
+              <p>
+                Accenture is a leading global professional services company that
+                helps the world’s leading businesses, governments and other
+                organizations build their digital core, optimize their
+                operations, accelerate revenue growth and enhance citizen
+                services—creating tangible value at speed and scale.
+              </p>
+            </div>
+            <div className={career.companyAlt}></div>
+          </article>
 
-					<article className={career.companyPositions}>
-						<div className={career.position}>
-							<div className={career.positionContent}>
-								<span class={career.positionHeader}>
-									<h3>Director of Product Design and Development</h3>
-									<h4>Nov 2021 - Present · 1 yrs 3 mos</h4>
-								</span>
-								<p>
-								I am responsible for the ideation, planning, and development of new consumer goods—and customer and employee facing microservice software. During these projects I work with key stakeholders within our company and supplychain to ensure and meet quality goals across multiple domains.
-								</p>
-							</div>
-							<div className={career.positionAlt}></div>
-						</div>
+          <article className={career.companyPositions}>
+            <div className={career.position}>
+              <div className={career.positionContent}>
+                <span class={career.positionHeader}>
+                  <h3>Software Engineer</h3>
+                  <h4>Internship</h4>
+                </span>
+                <p>
+                  During my internship as a full-stack software engineer, I
+                  contributed in developing and maintaining web applications,
+                  balancing front-end and back-end development. My role involved
+                  creating user-friendly interfaces, ensuring responsive
+                  layouts, and optimizing user experiences. I also worked on
+                  managing databases, APIs, and server infrastructure.
+                  Collaborating with a talented team, I contributed to project
+                  success by writing efficient code, troubleshooting issues, and
+                  enhancing application performance. This experience
+                  strengthened my problem-solving skills and deepened my passion
+                  for innovative, user-centric software solutions.
+                </p>
+                <p>Some of the key contributions👇</p>
+                <ul className={career.list}>
+                  <li>
+                    Covid-19 Vaccination Registering System
+                    <span className={career.subList}>
+                      <span className={career.bullet}></span>Collaborated in the
+                      development of a web application designed to facilitate
+                      the registration of the general public for Covid-19
+                      vaccinations during the pandemic.
+                    </span>
+                  </li>
+                </ul>
+                <Badges
+                  list={accenture}
+                  block="stack"
+                  fullContainer="fullContainer"
+                />
+              </div>
+              <div className={career.positionAlt}></div>
+            </div>
+          </article>
+          <article className={career.company}>
+            <div className={career.companyContent}>
+              <span className={career.companyHeader}>
+                <h3>Impressions</h3>
+                {/* <h4>Internship</h4> */}
+                <h4>Jan 2021 - Present</h4>
+                <h5>Digital Startup</h5>
+              </span>
+              <p>
+                Impressions is an innovative software agency that specializes in
+                WebApp development and AI with a small team of highly skilled
+                and passionate individuals that are dedicated to creating the
+                best software experiences for the clients.
+              </p>
+            </div>
+            <div className={career.companyAlt}></div>
+          </article>
+          <article className={career.companyPositions}>
+            <div className={career.position}>
+              <div className={career.positionContent}>
+                <span class={career.positionHeader}>
+                  <h3>Co-Founder & Developer</h3>
+                  <h4>Part-Time</h4>
+                </span>
+                <p>
+                  As a co-founder and developer of this software agency, I
+                  collaborated closely with the team, to plan our development
+                  efforts, manage projects, and deliver cutting-edge software
+                  solutions to clients. This role required technical expertise,
+                  strong communication, and problem-solving skills. I also
+                  played a pivotal role in setting the agency's strategic
+                  direction by identifying emerging technologies and trends to
+                  stay at the forefront of the industry.
+                </p>
+                <p>Some of the key contributions 👇</p>
+                <ul className={career.list}>
+                  <li>
+                    <a href="www.impressions.one">
+                      <p>www.impressions.one</p>
+                    </a>
+                    <span className={career.subList}>
+                      <span className={career.bullet}></span>Developed
+                      ImpressionsOne, an AI-driven web application that can be
+                      used for generating high quality YouTube Thumbnails,
+                      boosting video impressions and engagement.
+                    </span>
+                  </li>
+                  <li>
+                    BMSafety | Product Showcase Website
+                    <span className={career.subList}>
+                      <span className={career.bullet}></span>Developed a product
+                      showcase WebApp for a safety equipment company.
+                    </span>
+                  </li>
+                </ul>
+                <Badges
+                  list={impressions}
+                  block="stack"
+                  fullContainer="fullContainer"
+                />
+              </div>
+              <div className={career.positionAlt}></div>
+            </div>
+          </article>
 
-						<div className={career.position}>
-							<div className={career.positionContent}>
-								<span class={career.positionHeader}>
-									<h3>Full Stack Developer & User Experience Designer</h3>
-									<h4>Feb 2020 - Nov 2021 · 1 yrs 10 mos</h4>
-								</span>
-								<p>
-								As the lead full stack developer I am responsible for all software development, CI/CD, and QA. This is for the front end, APIs, and the back end. Additionally I was tasked with identifying and analyzing weak points in the customer journey and employee workflows. Each project had to be estimated and prioritized based on its workload and immediate impact to efficiency or revenue. Some of these projects have been so successful internally that we have planned refactoring for commercialization. 
-								</p>
-								<p>
-								Some key projects complete during this time 👇
-								</p>
-								<ul className={career.list}>
-									<li>
-										Product attribute and settings automated testing
-										<span className={career.subList}><span className={career.bullet}></span>Eradicated critical data input errors</span>
-									</li>
-									<li>
-										Inventory management reporting and automation 
-										<span className={career.subList}><span className={career.bullet}></span>Decreased purchasing labour by ~80%</span>
-									</li>
-									<li>
-										Sales management plugin with AJAX shopping cart integration
-										<span className={career.subList}><span className={career.bullet}></span>Increased AOV by 8.3%</span>
-									</li>
-									<li>
-										Bespoke ID verification software and WooCommerce integration
-										<span className={career.subList}><span className={career.bullet}></span>Decreased Credit Card fraud by 98%</span>
-									</li>
-								</ul>
-								<Badges list={fullStack} block="stack" fullContainer="fullContainer"/>
-							</div>
-							<div className={career.positionAlt}></div>
-						</div>
-					
-						<div className={career.position}>
-							<div className={career.positionContent}>
-									<span class={career.positionHeader}>
-										<h3>Front End Developer & User Interface Designer</h3>
-										<h4>Apr 2019 - Feb 2020 · 11 mos</h4>
-									</span>
-								<p>
-									I was brought on to help fill multiple creative rolls in a small start-up environment. Working with the marketing team to create the brand and logos — designing and developing a new front end for the website — and improving the users experience and store KPIs through design and merchandising optimizations.
-								</p>
-								<p>
-									Some key projects completed during this time 👇
-								</p>
-								<ul className={career.list}>
-									<li>
-										Full functionality interactive shopping cart to replace cart page
-										<span className={career.subList}><span className={career.bullet}></span>Increased conversions by 0.7%</span>
-									</li>
-									<li>Complex multi-state animated menus represented in an elegant UI 
-										<span className={career.subList}><span className={career.bullet}></span>Strong brand confidence booster with state of the art menu</span>
-									</li>
-									<li>
-										Design and development of the site and merchandising strategy optimized for market
-										<span className={career.subList}><span className={career.bullet}></span>7.1% overall conversion rate </span>
-									</li>
-								</ul>
-								<Badges list={stack} block="stack" fullContainer="fullContainer"/>
-							</div>
-							<div className={career.positionAlt}></div>
-						</div>
-					</article>
+          <article className={career.company}>
+            <div className={career.companyContent}>
+              <span className={career.companyHeader}>
+                <h3>SIIT, Thammasat University</h3>
+                {/* <h4>Part-time</h4> */}
+                <h4>Aug 2022 - Present</h4>
+                <h5>Pathumthani, Thailand</h5>
+              </span>
+              <p>
+                Sirindhorn International Institute of Technology Thammasat
+                University, was established in 1992 in cooperation with
+                Thammasat University, the Japan Federation of Economic
+                Organizations (KEIDANREN) and the Federation of Thai Industries
+                (FTI). SIIT’s objectives are to produce highly qualified
+                engineers and technologists.
+              </p>
+            </div>
+            <div className={career.companyAlt}></div>
+          </article>
+          <article className={career.companyPositions}>
+            <div className={career.position}>
+              <div className={career.positionContent}>
+                <span class={career.positionHeader}>
+                  <h3>Teaching Assistant</h3>
+                  <h4>Part-Time</h4>
+                </span>
+                <p>
+                  Helped instruct DES103 Object Oriented Programming (OOP) and
+                  DES231 Data Structures and Algorithms Courses, specifically
+                  focusing on Object Oriented Programming and Data Structures
+                  Implementation using JAVA, reaching a total of 500+ students.
+                  Throughout the courses, I covered fundamental concepts of
+                  Object Oriented Programming, including topics like
+                  Abstraction, Encapsulation, Polymorphism, Inheritance,
+                  Association, Aggregation, Composition and implementation of
+                  linear and non-linear Data Structures.Helped instruct DES103
+                  Object Oriented Programming (OOP) and DES231 Data Structures
+                  and Algorithms Courses, specifically focusing on Object
+                  Oriented Programming and Data Structures Implementation using
+                  JAVA, reaching a total of 500+ students. Throughout the
+                  courses, I covered fundamental concepts of Object Oriented
+                  Programming, including topics like Abstraction, Encapsulation,
+                  Polymorphism, Inheritance, Association, Aggregation,
+                  Composition and implementation of linear and non-linear Data
+                  Structures.
+                </p>
 
-					<article className={career.company}>
-						<div className={career.companyContent}>
-							<span className={career.companyHeader}>
-								<h3>Another Creative Ltd.</h3>
-								<h4>Contract Part-time</h4>
-								<h4>Jun 2016 - Present · 6 yrs 8 mos</h4>
-								<h5>Vancouver, British Columbia, Canada</h5>
-							</span>
-							<p>
-							Another Creative is a full stack agency that helps deliver exceptional digital experiences to small and medium businesses. Branding, Marketing, and Web/Software Development.
-							</p>
-						</div>
-						<div className={career.companyAlt}></div>
-					</article>
+                <Badges list={ta} block="stack" fullContainer="fullContainer" />
+              </div>
+              <div className={career.positionAlt}></div>
+            </div>
+          </article>
 
-					<article className={career.company}>
-						<div className={career.companyContent}>
-							<span className={career.companyHeader}>
-								<h3>West Coast Electronics</h3>
-								<h4>Permanent Full-time</h4>
-								<h4>Jan 2006 - Nov 2011 · 5 yrs 11 mos</h4>
-								<h5>Vancouver, British Columbia, Canada</h5>
-							</span>
-							<p>I was the Electronics Wizard 🧙‍♂️</p>
-							<p>West Coast Electronics was a repair shop that fixed computers, consoles, and cell phones.</p>
-						</div>
-						<div className={career.companyAlt}></div>
-					</article>
-				</section>
-			</Container>
-		</Section>
-	)
+          <article className={career.company}>
+            <div className={career.companyContent}>
+              <span className={career.companyHeader}>
+                <h3>PentaOne</h3>
+                {/* <h4>Permanent Full-time</h4> */}
+                <h4>Aug 2020 - Jan 2022 · 1 yr 6 mos</h4>
+                <h5>Colombo, Sri Lanka</h5>
+              </span>
+              <p>
+                PentaOne is a leading software development company specializing
+                in innovative, customized solutions for businesses. With a
+                talented team of engineers and designers, we deliver
+                cutting-edge software that meets unique client requirements. Our
+                expertise spans web and mobile app development, enterprise
+                software, and digital marketing solutions. We prioritize user
+                experience, quality, and long-term customer satisfaction.
+              </p>
+            </div>
+            <div className={career.companyAlt}></div>
+          </article>
+          <article className={career.companyPositions}>
+            <div className={career.position}>
+              <div className={career.positionContent}>
+                <span class={career.positionHeader}>
+                  <h3>Full Stack Developer</h3>
+                  <h4>Part-Time</h4>
+                </span>
+                <p>
+                  As the full stack developer at PentaOne, I was collaborating
+                  with both the back-end and front-end teams to develop
+                  functional web applications and services, while also working
+                  on the server-side of web applications.
+                </p>
+                <p>Some of the key contributions 👇</p>
+                <ul className={career.list}>
+                  <li>
+                    Multiple Hotel Management Systems
+                    <span className={career.subList}>
+                      <span className={career.bullet}></span>Actively
+                      participated in the design, development, and management of
+                      multiple hotel management systems tailored for clients in
+                      Sri Lanka.
+                    </span>
+                  </li>
+                </ul>
+                <Badges
+                  list={pentaone}
+                  block="stack"
+                  fullContainer="fullContainer"
+                />
+              </div>
+              <div className={career.positionAlt}></div>
+            </div>
+          </article>
+        </section>
+      </Container>
+    </Section>
+  );
 }
 
-const fullStack	= [
-	{ key: 'javascript', 	name: 'JavaScript', 		type: 'devicon' },
-	{ key: 'nodejs', 		name: 'NodeJS', 			type: 'devicon' },
-	{ key: 'react', 		name: 'React', 				type: 'devicon' },
-	{ key: 'nextjs', 		name: 'NextJS', 			type: 'devicon' },
-	{ key: 'php', 			name: 'PHP', 				type: 'devicon' },
-	{ key: 'wordpress', 	name: 'WordPress', 			type: 'devicon' },
-	{ key: 'woocommerce', 	name: 'WooCommerce', 		type: 'devicon' },
-	{ key: 'html5', 		name: 'HTML5', 				type: 'devicon' },
-	{ key: 'css3', 			name: 'CSS3', 				type: 'devicon' },
-	{ key: 'sass', 			name: 'SASS', 				type: 'devicon' },
-	{ key: 'git', 			name: 'Git', 				type: 'devicon' },
-	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
-	{ key: 'mongodb', 		name: 'MongoDB', 			type: 'devicon' },
-]
+const fullStack = [
+  { key: "javascript", name: "JavaScript", type: "devicon" },
+  { key: "nodejs", name: "NodeJS", type: "devicon" },
+  { key: "react", name: "React", type: "devicon" },
+  { key: "nextjs", name: "NextJS", type: "devicon" },
+  { key: "php", name: "PHP", type: "devicon" },
+  { key: "wordpress", name: "WordPress", type: "devicon" },
+  { key: "woocommerce", name: "WooCommerce", type: "devicon" },
+  { key: "html5", name: "HTML5", type: "devicon" },
+  { key: "css3", name: "CSS3", type: "devicon" },
+  { key: "sass", name: "SASS", type: "devicon" },
+  { key: "git", name: "Git", type: "devicon" },
+  { key: "mysql", name: "MySQL", type: "devicon" },
+  { key: "mongodb", name: "MongoDB", type: "devicon" },
+];
 
-const stack	= [
-	{ key: 'javascript', 	name: 'JavaScript', 		type: 'devicon' },
-	{ key: 'nodejs', 		name: 'NodeJS', 			type: 'devicon' },
-	{ key: 'react', 		name: 'React', 				type: 'devicon' },
-	{ key: 'nextjs', 		name: 'NextJS', 			type: 'devicon' },
-	{ key: 'php', 			name: 'PHP', 				type: 'devicon' },
-	{ key: 'wordpress', 	name: 'WordPress', 			type: 'devicon' },
-	{ key: 'woocommerce', 	name: 'WooCommerce', 		type: 'devicon' },
-	{ key: 'html5', 		name: 'HTML5', 				type: 'devicon' },
-	{ key: 'css3', 			name: 'CSS3', 				type: 'devicon' },
-	{ key: 'sass', 			name: 'SASS', 				type: 'devicon' },
-	{ key: 'git', 			name: 'Git', 				type: 'devicon' },
-	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
-	{ key: 'mongodb', 		name: 'MongoDB', 			type: 'devicon' },
-]
+const impressions = [
+  { key: "react", name: "React", type: "devicon" },
+  { key: "nextjs", name: "NextJS", type: "devicon" },
+  { key: "flask", name: "Flask", type: "devicon" },
+  { key: "postgresql", name: "Supabase/Postgresql", type: "devicon" },
+  { key: "git", name: "Git", type: "devicon" },
+];
+
+const ta = [{ key: "java", name: "Java", type: "devicon" }];
+
+const accenture = [
+  { key: "angularjs", name: "Angular", type: "devicon" },
+  { key: "react", name: "React", type: "devicon" },
+  { key: "spring", name: "Spring Boot", type: "devicon" },
+  { key: "redis", name: "Redis", type: "devicon" },
+  { key: "docker", name: "Docker", type: "devicon" },
+  { key: "git", name: "Git", type: "devicon" },
+  { key: "jira", name: "Jira", type: "devicon" },
+];
+
+const pentaone = [
+  { key: "javascript", name: "JavaScript", type: "devicon" },
+  { key: "html5", name: "HTML5", type: "devicon" },
+  { key: "css3", name: "CSS3", type: "devicon" },
+  { key: "php", name: "PHP", type: "devicon" },
+  { key: "mysql", name: "MySQL", type: "devicon" },
+  { key: "git", name: "Git", type: "devicon" },
+];
+
+const stack = [
+  { key: "javascript", name: "JavaScript", type: "devicon" },
+  { key: "nodejs", name: "NodeJS", type: "devicon" },
+  { key: "react", name: "React", type: "devicon" },
+  { key: "nextjs", name: "NextJS", type: "devicon" },
+  { key: "php", name: "PHP", type: "devicon" },
+  { key: "wordpress", name: "WordPress", type: "devicon" },
+  { key: "woocommerce", name: "WooCommerce", type: "devicon" },
+  { key: "html5", name: "HTML5", type: "devicon" },
+  { key: "css3", name: "CSS3", type: "devicon" },
+  { key: "sass", name: "SASS", type: "devicon" },
+  { key: "git", name: "Git", type: "devicon" },
+  { key: "mysql", name: "MySQL", type: "devicon" },
+  { key: "mongodb", name: "MongoDB", type: "devicon" },
+];
