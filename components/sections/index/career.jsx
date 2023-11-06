@@ -119,7 +119,7 @@ export default function Career() {
                   efforts, manage projects, and deliver cutting-edge software
                   solutions to clients. This role required technical expertise,
                   strong communication, and problem-solving skills. I also
-                  played a pivotal role in setting the agency's strategic
+                  played a pivotal role in setting the agency&apos;s strategic
                   direction by identifying emerging technologies and trends to
                   stay at the forefront of the industry.
                 </p>

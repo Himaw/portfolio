@@ -52,7 +52,7 @@ export default function FeaturedProject({ content }, index) {
         <div className={css.projectHeader}>
           <div className={css.header}>
             <h3 className="highlight">
-              <a href={url} target="_blank">
+              <a href={url} target="_blank" rel="noreferrer">
                 {project}
               </a>
             </h3>
@@ -75,7 +75,7 @@ export default function FeaturedProject({ content }, index) {
             />
           </div>
           <m.div variants={""} className={css.viewProject}>
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noreferrer">
               <Icon icon={["fad", "arrow-right-to-bracket"]} />
             </a>
           </m.div>
