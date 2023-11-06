@@ -39,10 +39,17 @@ export default function Footer() {
             {content.acknowledgments.map(({ person, link, note }, index) => {
               return (
                 <li key={index}>
-                  <a href={link} rel="noreferrer" target="_blank">
-                    {person}{" "}
-                    <Icon icon={["fad", "arrow-up-right-from-square"]} />
-                  </a>
+                  {link != "" ? (
+                    <a href={link} rel="noreferrer" target="_blank">
+                      {person}{" "}
+                      <Icon icon={["fad", "arrow-up-right-from-square"]} />
+                    </a>
+                  ) : (
+                    <a rel="noreferrer" target="_blank">
+                      {person}{" "}
+                      {/* <Icon icon={["fad", "arrow-up-right-from-square"]} /> */}
+                    </a>
+                  )}
                   <p>{note}</p>
                 </li>
               );
@@ -66,7 +73,7 @@ export default function Footer() {
           </ul>
           <ul className={css.social}>
             <li>
-              <h4>Social</h4>
+              <h4>Socials</h4>
             </li>
             <li className={css.socialList}>
               {content.social.map(({ url, icon }, index) => {

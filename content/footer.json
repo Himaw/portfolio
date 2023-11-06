@@ -1,37 +1,33 @@
 {
   "acknowledgments": [
     {
-      "person": "Jihad Hassan - Marketing Director",
+      "person": "Tandin Dorji, Seng Nu Pan - Master's Student",
       "link": "",
       "note": "Thank you for all the advice and feedback."
     },
     {
-      "person": "Colorpong - Artist",
-      "link": "ttps://www.youworkforthem.com/designer/536/colorpong?aff=1115",
-      "note": "Checkout their amazing vector illustrations."
+      "person": "SIIT, Thammasat University",
+      "link": "https://www.siit.tu.ac.th/",
+      "note": "Thank you for the resources and support."
     }
   ],
 
   "links": [
     {
-      "person": "YWFT Creative Marketplace",
-      "link": "https://www.youworkforthem.com/?aff=1115",
-      "note": "Best in class creative assets."
+      "person": "impressions.one",
+      "link": "https://www.impressions.one/",
+      "note": "Leverage AI to Design, Upscale and Analyze your YouTube thumbnails"
     }
   ],
 
   "social": [
     {
-      "url": "https://www.linkedin.com/in/--andrewnelson/",
+      "url": "https://www.linkedin.com/in/himaofficial/",
       "icon": "linkedin"
     },
     {
-      "url": "https://github.com/atlamors",
+      "url": "https://github.com/himaw",
       "icon": "github"
-    },
-    {
-      "url": "https://dev.to/andrewnelson",
-      "icon": "twitter"
     }
   ]
 }

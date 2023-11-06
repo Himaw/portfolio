@@ -1,53 +1,98 @@
 [
-	{
-		"project": "My Supply Co.",
-		"url": "https://mysupplyco.com",
-		"repo": "Private",
-		"descriptionTitle": "D2C & B2B ecommerce site and blog",
-		"description": "with elegant solutions for a complex codebase and customer journey.",
-		"imageOptions": [
-		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/03.png" },
-			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
-		],
-		"stack": [
-			{ "key": "php", 		"name": "PHP", 			"type": "devicon" },
-			{ "key": "mysql", 		"name": "mySQL", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "jquery", 		"name": "jQuery", 		"type": "devicon" },
-			{ "key": "woocommerce", "name": "WooCommerce", 	"type": "devicon" },
-			{ "key": "wordpress",	"name": "Wordpress", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{ "key": "google",		"name": "GA4/GTM/EEC", 	"type": "devicon" }
-		]
-	},
-	{
-		"project": "andrewnelson.net",
-		"url": "https://github.com/atlamors/portfolio",
-		"repo": "Public",
-		"descriptionTitle": "An open source portfolio",
-		"description": "built on Next.js and React. A fast and agile MERN stack single page application.",
-		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
-		],
-		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
-		],
-		"stack": [
-			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
-			{ "key": "react", 		"name": "React", 		"type": "devicon" },
-			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
-			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
-		]
-	}
+  {
+    "project": "impressions.one",
+    "url": "https://www.impressions.one",
+    "repo": "Private",
+    "descriptionTitle": "AI-driven WebApp",
+    "description": "that can be used for generating high quality YouTube Thumbnails, boosting video impressions and engagement.",
+    "imageOptions": [],
+    "images": [
+      {
+        "key": "mock-stack",
+        "hover": "right",
+        "h": "1419",
+        "w": "1317",
+        "url": "/img/msc-mock_stack/impressions_lapt3.png"
+      }
+    ],
+    "stack": [
+      { "key": "react", "name": "React", "type": "devicon" },
+      { "key": "flask", "name": "Flask", "type": "devicon" },
+      { "key": "postgresql", "name": "Supabase/Postgresql", "type": "devicon" },
+      { "key": "google", "name": "Google Cloud Platform", "type": "devicon" },
+      { "key": "git", "name": "Git", "type": "devicon" }
+    ]
+  },
+  {
+    "project": "!Hajimaaaa",
+    "url": "https://github.com/Himaw/Hajimaaa-ELearning",
+    "repo": "Public",
+    "descriptionTitle": "E-Learning Platform",
+    "description": "for secure, accessible education representing a cutting-edge solution that leverages principles of decentralization.",
+    "imageOptions": [{ "key": "size", "value": "large" }],
+    "images": [
+      {
+        "key": "portfolio",
+        "hover": "left",
+        "h": "1200",
+        "w": "1500",
+        "url": "/img/msc-mock_stack/Hajima_lapt6.png"
+      }
+    ],
+    "stack": [
+      { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+      { "key": "html5", "name": "HTML5", "type": "devicon" },
+      { "key": "css3", "name": "CSS3", "type": "devicon" },
+      { "key": "php", "name": "PHP", "type": "devicon" },
+      { "key": "mysql", "name": "MySQL", "type": "devicon" },
+      { "key": "git", "name": "Git", "type": "devicon" }
+    ]
+  },
+  {
+    "project": "madhaweeprinters.lk",
+    "url": "https://madhaweeprinters.lk/",
+    "repo": "Private",
+    "descriptionTitle": "Official Website",
+    "description": "for a printing press, with a modern design that provides a fully responsive and user-friendly experience for thier users.",
+    "imageOptions": [],
+    "images": [
+      {
+        "key": "mock-stack",
+        "hover": "right",
+        "h": "1419",
+        "w": "1317",
+        "url": "/img/msc-mock_stack/Madhawee_mac7.png"
+      }
+    ],
+    "stack": [
+      { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+      { "key": "html5", "name": "HTML5", "type": "devicon" },
+      { "key": "css3", "name": "CSS3", "type": "devicon" },
+      { "key": "php", "name": "PHP", "type": "devicon" },
+      { "key": "mysql", "name": "MySQL", "type": "devicon" },
+      { "key": "git", "name": "Git", "type": "devicon" }
+    ]
+  },
+  {
+    "project": "Conn(Indoor Positioning System)",
+    "url": "https://conn-git-staging-conn.vercel.app",
+    "repo": "Private",
+    "descriptionTitle": "WebApp",
+    "description": "for a real time Indoor positioning system, which visualizes the realtime location data.",
+    "imageOptions": [{ "key": "size", "value": "large" }],
+    "images": [
+      {
+        "key": "portfolio",
+        "hover": "left",
+        "h": "1200",
+        "w": "1500",
+        "url": "/img/msc-mock_stack/conn_mac2.png"
+      }
+    ],
+    "stack": [
+      { "key": "nextjs", "name": "NextJs", "type": "devicon" },
+      { "key": "postgresql", "name": "Supabase/Postgresql", "type": "devicon" },
+      { "key": "git", "name": "Git", "type": "devicon" }
+    ]
+  }
 ]
