@@ -138,14 +138,34 @@ export default function Navbar() {
     let bool = !menuState;
     menuToggle(bool);
   };
+  function handleScroll(url) {
+    // Find the target element by its ID
+    const element = document.getElementById(url);
+
+    if (element) {
+      // Get the element's position relative to the viewport
+      const elementRect = element.getBoundingClientRect();
+
+      // Calculate the scroll position considering any fixed headers or footers
+      const offset = elementRect.top + window.scrollY;
+
+      // Scroll to the calculated position with a smooth behavior
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth",
+      });
+    } else {
+      console.error(`Element with ID '${url}' not found.`);
+    }
+  }
 
   return (
     <nav id="Navbar" className={css.container}>
       <ul className={css.menu}>
         <li className={css.menuHeader}>
-          <Link className={css.logo} href="/">
+          <a className={css.cursor_change} onClick={() => handleScroll("hero")}>
             {settings.name}
-          </Link>
+          </a>
           <button
             onClick={toggleMenu}
             className={css.mobileToggle}
@@ -161,8 +181,8 @@ export default function Navbar() {
           <ul>
             {content.map(({ url, title }, index) => {
               return (
-                <li key={index}>
-                  <Link href={url}>{title}</Link>
+                <li onClick={() => handleScroll(url)} key={index}>
+                  <a className={css.cursor_change}>{title}</a>
                 </li>
               );
             })}

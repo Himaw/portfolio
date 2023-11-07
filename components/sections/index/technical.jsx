@@ -25,55 +25,57 @@ import about from "../../../styles/sections/index/about.module.scss";
  */
 export default function Technical() {
   return (
-    <Section classProp={`${about.section} borderBottom`}>
-      <Container spacing={["verticalXXXLrg"]}>
-        <SectionTitle
-          title="Technical"
-          preTitle="Hardskills"
-          subTitle="As a software developer, I use a wide range of technologies and languages to create intuitive digital experiences."
-        />
-        <section className={`${about.content} ${about.container}`}>
-          <div className={about.copy}>
-            <BadgesBlock
-              title="Languages I love to work with"
-              copy="With several years of experience as a developer, I possess a strong command of a diverse range of programming languages."
-              list={software}
-              block="software"
-              fullContainer="fullContainer"
-              icon="code"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-            <BadgesBlock
-              title="Technologies I love to build with"
-              copy="My preferred technologies encompass both full-stack solutions, ensuring a comprehensive approach to project development."
-              list={tech}
-              block="tech"
-              fullContainer="fullContainer"
-              icon="laptop-code"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-            <CopyBlock
-              title="Language Proficiency"
-              icon={["fat", "language"]}
-              copy="I possess professional proficiency in English and am a native speaker of Sinhala. Additionally, I have an intermediate level of proficiency in Thai. These language skills enable effective communication and adaptability in various linguistic contexts."
-              iconClass={about.icon}
-              containerClass={about.container}
-            />
-          </div>
-          <div className={`${about.image} ${about.technicalSvg}`}>
-            <Image
-              src="/img/dataism-24.svg"
-              width={477}
-              height={1111}
-              alt="Data Strings 01 by Colorpong: https://ywft.us/2177b695b"
-            />
-          </div>
-        </section>
-      </Container>
-      {/* <SectionGridBg gridSize={4}/> */}
-    </Section>
+    <div id="skills">
+      <Section classProp={`${about.section} borderBottom`}>
+        <Container spacing={["verticalXXXLrg"]}>
+          <SectionTitle
+            title="Skills"
+            preTitle="Capabilities"
+            subTitle="As a software developer, I use a wide range of technologies and languages to create intuitive digital experiences."
+          />
+          <section className={`${about.content} ${about.container}`}>
+            <div className={about.copy}>
+              <BadgesBlock
+                title="Languages I love to work with"
+                copy="With several years of experience as a developer, I possess a strong command of a diverse range of programming languages."
+                list={software}
+                block="software"
+                fullContainer="fullContainer"
+                icon="code"
+                containerClass={about.container}
+                headerIcon={about.icon}
+              />
+              <BadgesBlock
+                title="Technologies I love to build with"
+                copy="My preferred technologies encompass both full-stack solutions, ensuring a comprehensive approach to project development."
+                list={tech}
+                block="tech"
+                fullContainer="fullContainer"
+                icon="laptop-code"
+                containerClass={about.container}
+                headerIcon={about.icon}
+              />
+              <CopyBlock
+                title="Language Proficiency"
+                icon={["fat", "language"]}
+                copy="I possess professional proficiency in English and am a native speaker of Sinhala. Additionally, I have an intermediate level of proficiency in Thai. These language skills enable effective communication and adaptability in various linguistic contexts."
+                iconClass={about.icon}
+                containerClass={about.container}
+              />
+            </div>
+            <div className={`${about.image} ${about.technicalSvg}`}>
+              <Image
+                src="/img/dataism-24.svg"
+                width={477}
+                height={1111}
+                alt="Data Strings 01 by Colorpong: https://ywft.us/2177b695b"
+              />
+            </div>
+          </section>
+        </Container>
+        {/* <SectionGridBg gridSize={4}/> */}
+      </Section>
+    </div>
   );
 }
 
