@@ -26,7 +26,7 @@ export default function Career() {
         <SectionTitle
           title="Experience"
           preTitle="Career"
-          subTitle="I am currently pursuing my Master's degree and working as a part-time Teaching Assistant at Thammasat University, while also managing the development at Impressions."
+          subTitle="I am currently pursuing my Master's degree and working as a part-time Teaching Assistant at Thammasat University, while also managing several development projects"
         />
         <section className={career.area}>
           <article className={career.company}>
@@ -181,24 +181,13 @@ export default function Career() {
                   <h4>Part-Time</h4>
                 </span>
                 <p>
-                  Helped instruct DES103 Object Oriented Programming (OOP) and
-                  DES231 Data Structures and Algorithms Courses, specifically
-                  focusing on Object Oriented Programming and Data Structures
-                  Implementation using JAVA, reaching a total of 500+ students.
-                  Throughout the courses, I covered fundamental concepts of
-                  Object Oriented Programming, including topics like
-                  Abstraction, Encapsulation, Polymorphism, Inheritance,
-                  Association, Aggregation, Composition and implementation of
-                  linear and non-linear Data Structures.Helped instruct DES103
-                  Object Oriented Programming (OOP) and DES231 Data Structures
-                  and Algorithms Courses, specifically focusing on Object
-                  Oriented Programming and Data Structures Implementation using
-                  JAVA, reaching a total of 500+ students. Throughout the
-                  courses, I covered fundamental concepts of Object Oriented
-                  Programming, including topics like Abstraction, Encapsulation,
+                  I assisted in teaching Object Oriented Programming (OOP) and
+                  Data Structures and Algorithms (DES103 and DES231 courses)
+                  using Java to over 500 students. The courses covered
+                  fundamental OOP concepts such as Abstraction, Encapsulation,
                   Polymorphism, Inheritance, Association, Aggregation,
-                  Composition and implementation of linear and non-linear Data
-                  Structures.
+                  Composition, and the implementation of both linear and
+                  non-linear data structures.
                 </p>
 
                 <Badges list={ta} block="stack" fullContainer="fullContainer" />

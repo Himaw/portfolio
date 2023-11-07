@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // Core packages
 import Image from "next/image";
 
@@ -24,18 +26,43 @@ import about from "../../../styles/sections/index/about.module.scss";
  * @returns {jsx} <About />
  */
 export default function About() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Define a media query for mobile screens
+    const mobileMediaQuery = window.matchMedia("(max-width: 767px)");
+
+    // Function to update isMobile state
+    const handleResize = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add event listener for changes in screen size
+    mobileMediaQuery.addListener(handleResize);
+
+    // Initialize isMobile state based on the initial screen size
+    setIsMobile(mobileMediaQuery.matches);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      mobileMediaQuery.removeListener(handleResize);
+    };
+  }, []);
   return (
     <Section classProp={about.section}>
       <Container spacing={["verticalXXXLrg"]}>
         <SectionTitle
           title="About Me"
           preTitle="Synopsis"
-          subTitle="With a diverse skill set that includes Full-stack Development,  Search Engine Optimization (SEO), Project Management, and Artificial Intelligence (AI) I am a well-rounded digital professional."
+          subTitle="With a diverse skill set that includes Full-stack Development, Project Management, and Artificial Intelligence (AI) I am a well-rounded digital professional."
         />
         <section className={about.content}>
           <div className={about.image}>
-            <img src="/img/hima.jpg" alt="Hima's photo" />
-            {/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
+            {isMobile ? (
+              <Image src="/img/hima.jpg" width={600} height={800} />
+            ) : (
+              <img src="/img/hima.jpg" alt="Hima's photo" />
+            )}
           </div>
           <div className={about.copy}>
             <CopyBlock
