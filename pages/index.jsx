@@ -8,6 +8,7 @@ import FeaturedProjects from "../components/sections/projects/featured";
 import Color from "../components/utils/page.colors.util";
 
 import colors from "../content/index/_colors.json";
+import Loader from "../components/loading/loader";
 
 //
 export default function HomePage() {
