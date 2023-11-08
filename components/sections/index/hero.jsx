@@ -59,7 +59,11 @@ export default function Hero() {
             repeat={Infinity}
           />
           <section>
-            <h1 className={hero.header}>{content.header.name}</h1>
+            <h1 className={hero.header}>
+              {content.header.name}
+              <img className={hero.hima} src="img/hima.png" alt="" />
+            </h1>
+
             <h1 className={`${hero.header} ${hero.primaryDim}`}>
               {content.header.usp}
             </h1>

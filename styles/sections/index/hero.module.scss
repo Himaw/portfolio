@@ -171,3 +171,11 @@
     }
   }
 }
+
+.hima {
+  width: 82px;
+  //when screen size is mobile width should be 5%
+  @media only screen and (max-width: 767px) {
+    width: 50px;
+  }
+}
