@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 
 // Core packages
 import { Analytics } from "@vercel/analytics/react";
@@ -37,6 +38,9 @@ import "../styles/css/global.css";
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>Himasara Warnakulasuriya</title>
+      </Head>
       <LazyMotion features={domAnimation}>
         <Layout>
           <Component {...pageProps} />

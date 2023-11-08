@@ -39,7 +39,6 @@ export default function Document() {
           name="description"
           content="const Hima = ( name, passion ) => Himasara, I Turn Thoughts into Digital Realities"
         />
-        <title>Himasara Warnakulasuriya</title>
       </Head>
       <body>
         <Main />

@@ -4,6 +4,7 @@ import Footer from "./footer";
 import Loader from "../loading/loader";
 import Color from "../utils/page.colors.util";
 import colors from "/content/index/_colors.json";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Layout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -51,7 +52,10 @@ export default function Layout({ children }) {
       ) : (
         <div style={contentStyle}>
           <Navbar />
-          <main>{children}</main>
+          <main>
+            {children}
+            <Analytics />
+          </main>
           <Footer />
         </div>
       )}
