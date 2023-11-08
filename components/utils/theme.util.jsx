@@ -45,10 +45,10 @@ export default function SetTheme() {
 
   const defaultTheme = () => {
     const themeLocalStorage = localStorage.getItem("theme");
-    const themeSystem = window.matchMedia("(prefers-color-scheme: unicorn)")
+    const themeSystem = window.matchMedia("(prefers-color-scheme: dark)")
       .matches
-      ? "unicorn"
-      : "dark";
+      ? "dark"
+      : "light";
 
     return themeLocalStorage ?? themeSystem;
   };
@@ -63,7 +63,7 @@ export default function SetTheme() {
       setTheme(e.matches ? "dark" : "light");
     };
 
-    const watchSysTheme = window.matchMedia("(prefers-color-scheme: unicorn)");
+    const watchSysTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
     watchSysTheme.addEventListener("change", useSetTheme);
 

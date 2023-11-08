@@ -31,13 +31,22 @@ export default function Layout({ children }) {
     opacity: loading2 ? 0 : 1,
     transition: "opacity 0.5s ease",
   };
+  const contentStyle2 = {
+    opacity: 0,
+  };
 
   return (
     <div>
       {loading ? (
         <>
           <Color colors={colors} />
-          <Loader />
+          <div style={contentStyle2}>
+            <Navbar />
+          </div>
+          <main>
+            {" "}
+            <Loader />
+          </main>
         </>
       ) : (
         <div style={contentStyle}>
