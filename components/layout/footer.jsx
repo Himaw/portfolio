@@ -15,18 +15,18 @@ export default function Footer() {
     forks: null,
   });
 
-  useEffect(() => {
-    fetch(settings.portfolio.repo_api)
-      .then((response) => response.json())
-      .then((json) => {
-        const { stargazers_count, forks_count } = json;
-        setGitHubInfo({
-          stars: stargazers_count,
-          forks: forks_count,
-        });
-      })
-      .catch((e) => console.error(e));
-  }, []);
+  // useEffect(() => {
+  //   fetch(settings.portfolio.repo_api)
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       const { stargazers_count, forks_count } = json;
+  //       setGitHubInfo({
+  //         stars: stargazers_count,
+  //         forks: forks_count,
+  //       });
+  //     })
+  //     .catch((e) => console.error(e));
+  // }, []);
 
   return (
     <footer className={css.container}>
