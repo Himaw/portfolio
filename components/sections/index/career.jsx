@@ -129,7 +129,7 @@ export default function Career() {
                   <p>Some of the key contributions 👇</p>
                   <ul className={career.list}>
                     <li>
-                      <a href="www.impressions.one">
+                      <a href="http://www.impressions.one/" target="_blank">
                         <p>www.impressions.one</p>
                       </a>
                       <span className={career.subList}>
