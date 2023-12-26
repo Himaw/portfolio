@@ -49,12 +49,6 @@ export default function About() {
     };
   }, []);
 
-  const [countLoad, setCountLoad] = useState(0);
-
-  //   useEffect(() => {
-  //     console.log(countLoad);
-  //   }, [countLoad, setCountLoad]);
-
   return (
     <div id="about">
       <Section classProp={about.section}>
@@ -70,18 +64,9 @@ export default function About() {
           >
             <div className={about.image}>
               {isMobile ? (
-                <Image
-                  src="/img/hima.jpg"
-                  width={600}
-                  height={800}
-                  onLoadingComplete={() => setCountLoad(1)}
-                />
+                <Image src="/img/hima.jpg" width={600} height={800} priority />
               ) : (
-                <Image
-                  src="/img/hima.jpg"
-                  layout="fill"
-                  onLoadingComplete={() => setCountLoad(1)}
-                />
+                <Image src="/img/hima.jpg" layout="fill" priority />
               )}
             </div>
             <div className={about.copy}>
