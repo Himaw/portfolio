@@ -49,7 +49,7 @@ export default function Career() {
             <article className={career.companyPositions}>
               <div className={career.position}>
                 <div className={career.positionContent}>
-                  <span class={career.positionHeader}>
+                  <span className={career.positionHeader}>
                     <h3>Software Engineer</h3>
                     <h4>Full-Time</h4>
                   </span>
@@ -93,7 +93,7 @@ export default function Career() {
                         <span className={career.bullet}></span>Contributed to
                         developing software components for modern end-to-end
                         engineering platform that provides safe data to many of
-                        Alstom's railway signalling products.
+                        Alstom&apos;s railway signalling products.
                       </span>
                     </li>
                   </ul>
@@ -129,7 +129,7 @@ export default function Career() {
             <article className={career.companyPositions}>
               <div className={career.position}>
                 <div className={career.positionContent}>
-                  <span class={career.positionHeader}>
+                  <span className={career.positionHeader}>
                     <h3>Teaching Assistant</h3>
                     <h4>Part-Time</h4>
                   </span>
@@ -175,7 +175,7 @@ export default function Career() {
             <article className={career.companyPositions}>
               <div className={career.position}>
                 <div className={career.positionContent}>
-                  <span class={career.positionHeader}>
+                  <span className={career.positionHeader}>
                     <h3>Software Engineer</h3>
                     <h4>Internship</h4>
                   </span>
@@ -307,7 +307,7 @@ export default function Career() {
             <article className={career.companyPositions}>
               <div className={career.position}>
                 <div className={career.positionContent}>
-                  <span class={career.positionHeader}>
+                  <span className={career.positionHeader}>
                     <h3>Full Stack Developer</h3>
                     <h4>Part-Time</h4>
                   </span>
@@ -342,15 +342,15 @@ export default function Career() {
         </Container>
         <div className={css.bgContainer}>
           <span className={css.orbitalBg}>
-            <span class={`${css.bgSection}`}>
+            <span className={`${css.bgSection}`}>
               <span
                 className={`${css.bgInner} ${css.heroLeft} ${css.heroOrbital}`}
               ></span>
             </span>
-            <span class={`${css.bgSection}`}>
+            <span className={`${css.bgSection}`}>
               <span className={`${css.bgInner} ${css.heroCenter}`}></span>
             </span>
-            <span class={`${css.bgSection}`}>
+            <span className={`${css.bgSection}`}>
               <span
                 className={`${css.bgInner} ${css.heroRight} ${css.heroOrbital}`}
               ></span>
