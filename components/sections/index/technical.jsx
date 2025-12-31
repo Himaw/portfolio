@@ -81,10 +81,10 @@ export default function Technical() {
 }
 
 const software = [
-  { key: "python", name: "Python", type: "devicon" },
   { key: "java", name: "Java", type: "devicon" },
   { key: "javascript", name: "JavaScript", type: "devicon" },
   { key: "typescript", name: "TypeScript", type: "devicon" },
+  { key: "python", name: "Python", type: "devicon" },
   { key: "matlab", name: "MATLAB", type: "devicon" },
   { key: "c", name: "C++", type: "devicon" },
   { key: "php", name: "PHP", type: "devicon" },
@@ -99,6 +99,8 @@ const tech = [
   { key: "react", name: "React Native", type: "devicon" },
   { key: "nextjs", name: "NextJS", type: "devicon" },
   { key: "nodejs", name: "NodeJS", type: "devicon" },
+  { key: "vuejs", name: "VueJS", type: "devicon" },
+  { key: "graphql", name: "GraphQL", type: "devicon" },
   { key: "angularjs", name: "Angular", type: "devicon" },
   { key: "flask", name: "Flask", type: "devicon" },
   { key: "spring", name: "Spring Boot", type: "devicon" },
@@ -108,5 +110,5 @@ const tech = [
   { key: "git", name: "Git", type: "devicon" },
   { key: "docker", name: "Docker", type: "devicon" },
   { key: "google", name: "Google Cloud Platform", type: "devicon" },
-  { key: "amazonwebservices", name: "Amazon Web Services", type: "devicon" },
+  { key: "azure", name: "Microsoft Azure", type: "devicon" },
 ];

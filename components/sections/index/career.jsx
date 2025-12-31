@@ -28,15 +28,137 @@ export default function Career() {
           <SectionTitle
             title="Experience"
             preTitle="Career"
-            subTitle="I am currently pursuing my Master's degree and working as a part-time Teaching Assistant at Thammasat University, while also managing several development projects"
+            subTitle="I am currently working as a Software Engineer at Alstom Thailand, learning and growing every day in this ever-evolving tech industry."
           />
           <section className={career.area}>
             <article className={career.company}>
               <div className={career.companyContent}>
                 <span className={career.companyHeader}>
+                  <h3>Alstom</h3>
+                  <h4>May 2024 - Present</h4>
+                  <h5>Bangkok, Thailand</h5>
+                </span>
+                <p>
+                  Alstom is a global leader in smart and sustainable mobility,
+                  developing and delivering innovative solutions for rail
+                  transport.
+                </p>
+              </div>
+              <div className={career.companyAlt}></div>
+            </article>
+            <article className={career.companyPositions}>
+              <div className={career.position}>
+                <div className={career.positionContent}>
+                  <span class={career.positionHeader}>
+                    <h3>Software Engineer</h3>
+                    <h4>Full-Time</h4>
+                  </span>
+                  <p>
+                    As a Software Engineer at Alstom, I am involved in the
+                    development and maintenance of software solutions that
+                    contribute to the advancement of rail transport systems. My
+                    role encompasses designing, coding, testing, and deploying
+                    software applications that enhance the efficiency, safety,
+                    and sustainability of rail networks. I collaborate with
+                    cross-functional teams to ensure that our software solutions
+                    meet industry standards and customer needs, while also
+                    staying abreast of emerging technologies in the
+                    transportation sector.
+                  </p>
+                  <p>Some of the key contributions 👇</p>
+                  <ul className={career.list}>
+                    <li>
+                      <a
+                        href="http://www.impressions.one/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <p>MX CeViz (Counter Example Visualization Tool)</p>
+                      </a>
+                      <span className={career.subList}>
+                        <span className={career.bullet}></span>Contributed to
+                        developing a highly advanced train safety tool used for
+                        visualizing and debugging train operation data.
+                      </span>
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.impressions.one/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <p>MX Platform</p>
+                      </a>
+                      <span className={career.subList}>
+                        <span className={career.bullet}></span>Contributed to
+                        developing software components for modern end-to-end
+                        engineering platform that provides safe data to many of
+                        Alstom's railway signalling products.
+                      </span>
+                    </li>
+                  </ul>
+                  <Badges
+                    list={alstom}
+                    block="stack"
+                    fullContainer="fullContainer"
+                  />
+                </div>
+                <div className={career.positionAlt}></div>
+              </div>
+            </article>
+
+            <article className={career.company}>
+              <div className={career.companyContent}>
+                <span className={career.companyHeader}>
+                  <h3>SIIT, Thammasat University</h3>
+                  {/* <h4>Part-time</h4> */}
+                  <h4>Aug 2022 - May 2024 · 1 year and 9 months</h4>
+                  <h5>Pathumthani, Thailand</h5>
+                </span>
+                <p>
+                  Sirindhorn International Institute of Technology Thammasat
+                  University, was established in 1992 in cooperation with
+                  Thammasat University, the Japan Federation of Economic
+                  Organizations (KEIDANREN) and the Federation of Thai
+                  Industries (FTI). SIIT’s objectives are to produce highly
+                  qualified engineers and technologists.
+                </p>
+              </div>
+              <div className={career.companyAlt}></div>
+            </article>
+            <article className={career.companyPositions}>
+              <div className={career.position}>
+                <div className={career.positionContent}>
+                  <span class={career.positionHeader}>
+                    <h3>Teaching Assistant</h3>
+                    <h4>Part-Time</h4>
+                  </span>
+                  <p>
+                    I assisted in teaching Object Oriented Programming (OOP) and
+                    Data Structures and Algorithms (DES103 and DES231 courses)
+                    using Java to over 500 students. The courses covered
+                    fundamental OOP concepts such as Abstraction, Encapsulation,
+                    Polymorphism, Inheritance, Association, Aggregation,
+                    Composition, and the implementation of both linear and
+                    non-linear data structures.
+                  </p>
+
+                  <Badges
+                    list={ta}
+                    block="stack"
+                    fullContainer="fullContainer"
+                  />
+                </div>
+                <div className={career.positionAlt}></div>
+              </div>
+            </article>
+
+            <article className={career.company}>
+              <div className={career.companyContent}>
+                <span className={career.companyHeader}>
                   <h3>Accenture</h3>
                   {/* <h4>Internship</h4> */}
-                  <h4>June 2021 - Aug 2021 · 3 mos</h4>
+                  <h4>June 2021 - Aug 2021 · 3 months</h4>
                   <h5>Bangkok, Thailand</h5>
                 </span>
                 <p>
@@ -92,12 +214,12 @@ export default function Career() {
                 <div className={career.positionAlt}></div>
               </div>
             </article>
-            <article className={career.company}>
+            {/* <article className={career.company}>
               <div className={career.companyContent}>
                 <span className={career.companyHeader}>
                   <h3>Impressions</h3>
-                  {/* <h4>Internship</h4> */}
-                  <h4>Jan 2021 - Present</h4>
+
+                  <h4>Jan 2022 - May 2024</h4>
                   <h5>Digital Startup</h5>
                 </span>
                 <p>
@@ -108,8 +230,8 @@ export default function Career() {
                 </p>
               </div>
               <div className={career.companyAlt}></div>
-            </article>
-            <article className={career.companyPositions}>
+            </article> */}
+            {/* <article className={career.companyPositions}>
               <div className={career.position}>
                 <div className={career.positionContent}>
                   <span class={career.positionHeader}>
@@ -159,60 +281,14 @@ export default function Career() {
                 </div>
                 <div className={career.positionAlt}></div>
               </div>
-            </article>
-
-            <article className={career.company}>
-              <div className={career.companyContent}>
-                <span className={career.companyHeader}>
-                  <h3>SIIT, Thammasat University</h3>
-                  {/* <h4>Part-time</h4> */}
-                  <h4>Aug 2022 - Present</h4>
-                  <h5>Pathumthani, Thailand</h5>
-                </span>
-                <p>
-                  Sirindhorn International Institute of Technology Thammasat
-                  University, was established in 1992 in cooperation with
-                  Thammasat University, the Japan Federation of Economic
-                  Organizations (KEIDANREN) and the Federation of Thai
-                  Industries (FTI). SIIT’s objectives are to produce highly
-                  qualified engineers and technologists.
-                </p>
-              </div>
-              <div className={career.companyAlt}></div>
-            </article>
-            <article className={career.companyPositions}>
-              <div className={career.position}>
-                <div className={career.positionContent}>
-                  <span class={career.positionHeader}>
-                    <h3>Teaching Assistant</h3>
-                    <h4>Part-Time</h4>
-                  </span>
-                  <p>
-                    I assisted in teaching Object Oriented Programming (OOP) and
-                    Data Structures and Algorithms (DES103 and DES231 courses)
-                    using Java to over 500 students. The courses covered
-                    fundamental OOP concepts such as Abstraction, Encapsulation,
-                    Polymorphism, Inheritance, Association, Aggregation,
-                    Composition, and the implementation of both linear and
-                    non-linear data structures.
-                  </p>
-
-                  <Badges
-                    list={ta}
-                    block="stack"
-                    fullContainer="fullContainer"
-                  />
-                </div>
-                <div className={career.positionAlt}></div>
-              </div>
-            </article>
+            </article> */}
 
             <article className={career.company}>
               <div className={career.companyContent}>
                 <span className={career.companyHeader}>
                   <h3>PentaOne</h3>
                   {/* <h4>Permanent Full-time</h4> */}
-                  <h4>Aug 2020 - Jan 2022 · 1 yr 6 mos</h4>
+                  <h4>Aug 2020 - Jan 2022 · 1 yr 6 months</h4>
                   <h5>Colombo, Sri Lanka</h5>
                 </span>
                 <p>
@@ -309,6 +385,14 @@ const impressions = [
   { key: "flask", name: "Flask", type: "devicon" },
   { key: "postgresql", name: "Supabase/Postgresql", type: "devicon" },
   { key: "git", name: "Git", type: "devicon" },
+];
+
+const alstom = [
+  { key: "vuejs", name: "VueJs", type: "devicon" },
+  { key: "spring", name: "Spring Boot", type: "devicon" },
+  { key: "graphql", name: "GraphQL", type: "devicon" },
+  { key: "cypressio", name: "Cypress", type: "devicon" },
+  { key: "azure", name: "Azure DevOps", type: "devicon" },
 ];
 
 const ta = [{ key: "java", name: "Java", type: "devicon" }];
