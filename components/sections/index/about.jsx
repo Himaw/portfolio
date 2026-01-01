@@ -64,9 +64,14 @@ export default function About() {
           >
             <div className={about.image}>
               {isMobile ? (
-                <Image src="/img/hima.jpg" width={600} height={800} priority />
+                <Image
+                  src="/img/hima_new.jpeg"
+                  width={600}
+                  height={800}
+                  priority
+                />
               ) : (
-                <Image src="/img/hima.jpg" layout="fill" priority />
+                <Image src="/img/hima_new.jpeg" layout="fill" priority />
               )}
             </div>
             <div className={about.copy}>
