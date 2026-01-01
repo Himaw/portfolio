@@ -68,13 +68,8 @@ export default function Career() {
                   <p>Some of the key contributions 👇</p>
                   <ul className={career.list}>
                     <li>
-                      <a
-                        href="http://www.impressions.one/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <p>MX CeViz (Counter Example Visualization Tool)</p>
-                      </a>
+                      <p>MX CeViz (Counter Example Visualization Tool)</p>
+
                       <span className={career.subList}>
                         <span className={career.bullet}></span>Contributed to
                         developing a highly advanced train safety tool used for
@@ -82,13 +77,8 @@ export default function Career() {
                       </span>
                     </li>
                     <li>
-                      <a
-                        href="http://www.impressions.one/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <p>MX Platform</p>
-                      </a>
+                      <p>MX Platform</p>
+
                       <span className={career.subList}>
                         <span className={career.bullet}></span>Contributed to
                         developing software components for modern end-to-end
