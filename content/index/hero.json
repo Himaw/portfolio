@@ -2,7 +2,7 @@
   "intro": {
     "start": "const myInfo = ( name, passion ) =>",
     "end": "Hi!, my name is",
-    "speed": 60,
+    "speed": 65,
     "deletionSpeed": 80,
     "wrapper": "h2",
     "startDelay": 1000,
