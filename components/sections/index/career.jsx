@@ -1,6 +1,4 @@
 // Core packages
-import Image from "next/image";
-
 import Badges from "../../utils/badge.list.util";
 
 // Section structure
@@ -16,13 +14,15 @@ import career from "../../../styles/sections/index/career.module.scss";
 import css from "../../../styles/sections/projects/featured.module.scss";
 
 /**
- * Section: Career
+ * Career section.
+ * Lists professional work experience in reverse chronological order,
+ * including company details, roles, responsibilities, and tech badge stacks.
  *
- * @returns {jsx} <Career />
+ * @returns {JSX.Element}
  */
 export default function Career() {
   return (
-    <div id="carreer">
+    <div id="career">
       <Section classProp={`${career.section} borderBottom`}>
         <Container spacing={["verticalXXXLrg"]}>
           <SectionTitle
@@ -101,7 +101,6 @@ export default function Career() {
               <div className={career.companyContent}>
                 <span className={career.companyHeader}>
                   <h3>SIIT, Thammasat University</h3>
-                  {/* <h4>Part-time</h4> */}
                   <h4>Aug 2022 - May 2024 · 1 year and 9 months</h4>
                   <h5>Pathumthani, Thailand</h5>
                 </span>
@@ -110,8 +109,8 @@ export default function Career() {
                   University, was established in 1992 in cooperation with
                   Thammasat University, the Japan Federation of Economic
                   Organizations (KEIDANREN) and the Federation of Thai
-                  Industries (FTI). SIIT’s objectives are to produce highly
-                  qualified engineers and technologists.
+                  Industries (FTI). SIIT&apos;s objectives are to produce
+                  highly qualified engineers and technologists.
                 </p>
               </div>
               <div className={career.companyAlt}></div>
@@ -147,15 +146,14 @@ export default function Career() {
               <div className={career.companyContent}>
                 <span className={career.companyHeader}>
                   <h3>Accenture</h3>
-                  {/* <h4>Internship</h4> */}
                   <h4>June 2021 - Aug 2021 · 3 months</h4>
                   <h5>Bangkok, Thailand</h5>
                 </span>
                 <p>
                   Accenture is a leading global professional services company
-                  that helps the world’s leading businesses, governments and
-                  other organizations build their digital core, optimize their
-                  operations, accelerate revenue growth and enhance citizen
+                  that helps the world&apos;s leading businesses, governments
+                  and other organizations build their digital core, optimize
+                  their operations, accelerate revenue growth and enhance citizen
                   services—creating tangible value at speed and scale.
                 </p>
               </div>
@@ -204,80 +202,11 @@ export default function Career() {
                 <div className={career.positionAlt}></div>
               </div>
             </article>
-            {/* <article className={career.company}>
-              <div className={career.companyContent}>
-                <span className={career.companyHeader}>
-                  <h3>Impressions</h3>
-
-                  <h4>Jan 2022 - May 2024</h4>
-                  <h5>Digital Startup</h5>
-                </span>
-                <p>
-                  Impressions is an innovative software agency that specializes
-                  in WebApp development and AI with a small team of highly
-                  skilled and passionate individuals that are dedicated to
-                  creating the best software experiences for the clients.
-                </p>
-              </div>
-              <div className={career.companyAlt}></div>
-            </article> */}
-            {/* <article className={career.companyPositions}>
-              <div className={career.position}>
-                <div className={career.positionContent}>
-                  <span class={career.positionHeader}>
-                    <h3>Co-Founder & Developer</h3>
-                    <h4>Part-Time</h4>
-                  </span>
-                  <p>
-                    As a co-founder and developer of this software agency, I
-                    collaborated closely with the team, to plan our development
-                    efforts, manage projects, and deliver cutting-edge software
-                    solutions to clients. This role required technical
-                    expertise, strong communication, and problem-solving skills.
-                    I also played a pivotal role in setting the agency&apos;s
-                    strategic direction by identifying emerging technologies and
-                    trends to stay at the forefront of the industry.
-                  </p>
-                  <p>Some of the key contributions 👇</p>
-                  <ul className={career.list}>
-                    <li>
-                      <a
-                        href="http://www.impressions.one/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <p>www.impressions.one</p>
-                      </a>
-                      <span className={career.subList}>
-                        <span className={career.bullet}></span>Developed
-                        ImpressionsOne, an AI-driven web application that can be
-                        used for generating high quality YouTube Thumbnails,
-                        boosting video impressions and engagement.
-                      </span>
-                    </li>
-                    <li>
-                      BMSafety | Product Showcase Website
-                      <span className={career.subList}>
-                        <span className={career.bullet}></span>Developed a
-                        product showcase WebApp for a safety equipment company.
-                      </span>
-                    </li>
-                  </ul>
-                  <Badges
-                    list={impressions}
-                    block="stack"
-                    fullContainer="fullContainer"
-                  />
-                </div>
-                <div className={career.positionAlt}></div>
-              </div>
-            </article> */}
 
             <article className={career.company}>
               <div className={career.companyContent}>
                 <span className={career.companyHeader}>
                   <h3>PentaOne</h3>
-                  {/* <h4>Permanent Full-time</h4> */}
                   <h4>Aug 2020 - Jan 2022 · 1 yr 6 months</h4>
                   <h5>Colombo, Sri Lanka</h5>
                 </span>
@@ -353,29 +282,7 @@ export default function Career() {
   );
 }
 
-const fullStack = [
-  { key: "javascript", name: "JavaScript", type: "devicon" },
-  { key: "nodejs", name: "NodeJS", type: "devicon" },
-  { key: "react", name: "React", type: "devicon" },
-  { key: "nextjs", name: "NextJS", type: "devicon" },
-  { key: "php", name: "PHP", type: "devicon" },
-  { key: "wordpress", name: "WordPress", type: "devicon" },
-  { key: "woocommerce", name: "WooCommerce", type: "devicon" },
-  { key: "html5", name: "HTML5", type: "devicon" },
-  { key: "css3", name: "CSS3", type: "devicon" },
-  { key: "sass", name: "SASS", type: "devicon" },
-  { key: "git", name: "Git", type: "devicon" },
-  { key: "mysql", name: "MySQL", type: "devicon" },
-  { key: "mongodb", name: "MongoDB", type: "devicon" },
-];
-
-const impressions = [
-  { key: "react", name: "React", type: "devicon" },
-  { key: "nextjs", name: "NextJS", type: "devicon" },
-  { key: "flask", name: "Flask", type: "devicon" },
-  { key: "postgresql", name: "Supabase/Postgresql", type: "devicon" },
-  { key: "git", name: "Git", type: "devicon" },
-];
+// Tech stacks used per company / role — used to populate the badge lists
 
 const alstom = [
   { key: "vuejs", name: "VueJs", type: "devicon" },
@@ -404,20 +311,4 @@ const pentaone = [
   { key: "php", name: "PHP", type: "devicon" },
   { key: "mysql", name: "MySQL", type: "devicon" },
   { key: "git", name: "Git", type: "devicon" },
-];
-
-const stack = [
-  { key: "javascript", name: "JavaScript", type: "devicon" },
-  { key: "nodejs", name: "NodeJS", type: "devicon" },
-  { key: "react", name: "React", type: "devicon" },
-  { key: "nextjs", name: "NextJS", type: "devicon" },
-  { key: "php", name: "PHP", type: "devicon" },
-  { key: "wordpress", name: "WordPress", type: "devicon" },
-  { key: "woocommerce", name: "WooCommerce", type: "devicon" },
-  { key: "html5", name: "HTML5", type: "devicon" },
-  { key: "css3", name: "CSS3", type: "devicon" },
-  { key: "sass", name: "SASS", type: "devicon" },
-  { key: "git", name: "Git", type: "devicon" },
-  { key: "mysql", name: "MySQL", type: "devicon" },
-  { key: "mongodb", name: "MongoDB", type: "devicon" },
 ];

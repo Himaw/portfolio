@@ -1,15 +1,22 @@
 import { useEffect } from "react";
+
+import Icon from "../utils/icon.util.jsx";
+
+import badges from "../../styles/blocks/badges.module.scss";
 import { m, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// Utility components
-import Icon from "../utils/icon.util.jsx";
-
 /**
- * scss reference for utils should probably be pulled in from the first component under the section
+ * Animated badge list component.
+ * Renders a list of technology/skill badges with staggered entry animations
+ * that trigger when the list scrolls into view.
+ *
+ * @param {Array}   list            - Array of badge items: { key, name, type }
+ * @param {string}  block           - CSS modifier class for the badge list layout
+ * @param {boolean} color           - Whether to render devicons in color (pass false to disable)
+ * @param {string}  fullContainer   - CSS class to stretch the list to a full container width
+ * @returns {JSX.Element}
  */
-import badges from "../../styles/blocks/badges.module.scss";
-
 export default function Badges({ list, block, color, fullContainer }) {
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -26,7 +33,8 @@ export default function Badges({ list, block, color, fullContainer }) {
     }
   }, [controls, inView]);
 
-  const container = {
+  /** Framer Motion variants for the outer list container (staggered children) */
+  const containerVariants = {
     hidden: {
       opacity: 1,
       transition: {
@@ -43,7 +51,8 @@ export default function Badges({ list, block, color, fullContainer }) {
     },
   };
 
-  const item = {
+  /** Framer Motion variants for each individual badge item */
+  const itemVariants = {
     hidden: {
       y: 20,
       opacity: -0.5,
@@ -57,9 +66,8 @@ export default function Badges({ list, block, color, fullContainer }) {
   return (
     <m.ul
       className={`${badges.list} ${badges[block]} ${badges[fullContainer]}`}
-      //Animations
       ref={ref}
-      variants={container}
+      variants={containerVariants}
       initial="hidden"
       animate={controls}
       whileHover="hover"
@@ -69,8 +77,7 @@ export default function Badges({ list, block, color, fullContainer }) {
           <m.li
             key={name}
             className={`${badges.item} ${key}`}
-            //Animations
-            variants={item}
+            variants={itemVariants}
           >
             <IconModule iconKey={key} iconType={type} color={color} />
             <span className={badges.title}>{name}</span>
@@ -81,11 +88,17 @@ export default function Badges({ list, block, color, fullContainer }) {
   );
 }
 
+/**
+ * Renders the correct icon element based on the icon type.
+ * Supports Font Awesome icon types and Devicon classes.
+ *
+ * @param {string}  iconKey  - The icon identifier key
+ * @param {string}  iconType - The icon library type (e.g. "devicon", "fad", "fas")
+ * @param {boolean} color    - Whether to apply colored class to devicons
+ * @returns {JSX.Element|null}
+ */
 function IconModule({ iconKey, iconType, color }) {
-  let colored = "colored";
-  if (color === false) {
-    colored = "";
-  }
+  const colorClass = color === false ? "" : "colored";
 
   switch (iconType) {
     case "far":
@@ -94,10 +107,10 @@ function IconModule({ iconKey, iconType, color }) {
     case "fas":
       return <Icon icon={[iconType, iconKey]} />;
     case "devicon":
-      return <i className={`devicon-${iconKey}-plain ${colored}`} />;
+      return <i className={`devicon-${iconKey}-plain ${colorClass}`} />;
     case "express":
-      return <i className={`devicon-express-original ${colored}`} />;
-
-      return "";
+      return <i className={`devicon-express-original ${colorClass}`} />;
+    default:
+      return null;
   }
 }

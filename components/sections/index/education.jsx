@@ -15,9 +15,11 @@ import education from "../../../styles/sections/index/education.module.scss";
 import css from "../../../styles/sections/projects/featured.module.scss";
 
 /**
- * Section: Education
+ * Education section.
+ * Lists academic institutions and degrees in reverse chronological order,
+ * with tech stacks relevant to each degree.
  *
- * @returns {jsx} <Education />
+ * @returns {JSX.Element}
  */
 export default function Education() {
   return (
@@ -38,9 +40,12 @@ export default function Education() {
                   <h5>Pathumthani, Thailand</h5>
                 </span>
                 <p>
-                  Sirindhorn International Institute of Technology (SIIT) at Thammasat University is a leading international center of excellence in engineering and technology. 
-                  My academic journey here spanned both my undergraduate and graduate studies, deeply focusing on software engineering, 
-                  artificial intelligence, and advanced computing paradigms.
+                  Sirindhorn International Institute of Technology (SIIT) at
+                  Thammasat University is a leading international center of
+                  excellence in engineering and technology. My academic journey
+                  here spanned both my undergraduate and graduate studies,
+                  deeply focusing on software engineering, artificial
+                  intelligence, and advanced computing paradigms.
                 </p>
               </div>
               <div className={education.institutionAlt}></div>
@@ -54,8 +59,11 @@ export default function Education() {
                   </span>
                   <p>CGPA 3.92/4.00</p>
                   <p>
-                    Focused on advanced algorithmic design, artificial intelligence, and scalable software systems. 
-                    Deepened my research capabilities and understanding of machine learning models and large-scale data processing in modern real-world applications.
+                    Focused on advanced algorithmic design, artificial
+                    intelligence, and scalable software systems. Deepened my
+                    research capabilities and understanding of machine learning
+                    models and large-scale data processing in modern real-world
+                    applications.
                   </p>
                   <Badges
                     list={mastersStack}
@@ -68,14 +76,19 @@ export default function Education() {
               <div className={education.degree}>
                 <div className={education.degreeContent}>
                   <span className={education.degreeHeader}>
-                    <h3>Bachelor of Engineering in Computer Engineering (Hons.)</h3>
+                    <h3>
+                      Bachelor of Engineering in Computer Engineering (Hons.)
+                    </h3>
                     <h4>Aug 2018 - May 2022</h4>
                   </span>
                   <p>CGPA 3.74/4.00</p>
                   <p>
-                    Built a strong foundation in computer science and engineering principles. 
-                    Learned core subjects including object-oriented programming, data structures, algorithms, databases, computer networks, and software engineering methodologies. 
-                    Actively participated in practical projects to hone my problem-solving skills.
+                    Built a strong foundation in computer science and engineering
+                    principles. Learned core subjects including object-oriented
+                    programming, data structures, algorithms, databases, computer
+                    networks, and software engineering methodologies. Actively
+                    participated in practical projects to hone my problem-solving
+                    skills.
                   </p>
                   <Badges
                     list={bachelorsStack}
@@ -95,8 +108,10 @@ export default function Education() {
                   <h5>Colombo, Sri Lanka</h5>
                 </span>
                 <p>
-                  NIBM is a premier educational institution in Sri Lanka renowned for its business and computing programs. 
-                  My studies here provided an early and solid introduction to the world of software development before pursuing my engineering degree.
+                  NIBM is a premier educational institution in Sri Lanka
+                  renowned for its business and computing programs. My studies
+                  here provided an early and solid introduction to the world of
+                  software development before pursuing my engineering degree.
                 </p>
               </div>
               <div className={education.institutionAlt}></div>
@@ -109,8 +124,10 @@ export default function Education() {
                     <h4>Oct 2017 - Mar 2018</h4>
                   </span>
                   <p>
-                    Gained an essential, practical understanding of computer programming fundamentals. 
-                    Learned about basic software logic, introductory development concepts, and foundational languages that sparked my passion for coding.
+                    Gained an essential, practical understanding of computer
+                    programming fundamentals. Learned about basic software logic,
+                    introductory development concepts, and foundational languages
+                    that sparked my passion for coding.
                   </p>
                   <Badges
                     list={diplomaStack}
@@ -130,8 +147,9 @@ export default function Education() {
                   <h5>Colombo, Sri Lanka</h5>
                 </span>
                 <p>
-                  Ananda College is widely recognized as one of the best and most prestigious educational 
-                  institutions in Sri Lanka, offering a highly competitive and rich academic environment.
+                  Ananda College is widely recognized as one of the best and
+                  most prestigious educational institutions in Sri Lanka,
+                  offering a highly competitive and rich academic environment.
                 </p>
               </div>
               <div className={education.institutionAlt}></div>
@@ -144,12 +162,16 @@ export default function Education() {
                     <h4>Jun 2015 - Sep 2017</h4>
                   </span>
                   <p>
-                    Maths: A Grade, Physics: B Grade, Chemistry: B Grade <br /> Colombo District Rank: 532
+                    Maths: A Grade, Physics: B Grade, Chemistry: B Grade <br />{" "}
+                    Colombo District Rank: 532
                   </p>
                   <p>
-                    Completed the Sri Lanka General Certificate of Education (Advanced Level) Examination, a crucial and high-stakes 
-                    public exam that determines university entrance. This demanding curriculum fortified my analytical 
-                    thinking and problem-solving abilities, particularly in mathematics and physics.
+                    Completed the Sri Lanka General Certificate of Education
+                    (Advanced Level) Examination, a crucial and high-stakes
+                    public exam that determines university entrance. This
+                    demanding curriculum fortified my analytical thinking and
+                    problem-solving abilities, particularly in mathematics and
+                    physics.
                   </p>
                 </div>
                 <div className={education.degreeAlt}></div>
@@ -180,6 +202,8 @@ export default function Education() {
   );
 }
 
+// Tech stacks used per degree for the badge lists
+
 const mastersStack = [
   { key: "cplusplus", name: "C++", type: "devicon" },
   { key: "python", name: "Python", type: "devicon" },
@@ -194,7 +218,7 @@ const bachelorsStack = [
   { key: "react", name: "React", type: "devicon" },
   { key: "nodejs", name: "Node.js", type: "devicon" },
   { key: "mysql", name: "MySQL", type: "devicon" },
-  {key: "matlab", name: "Matlab", type: "devicon"}
+  { key: "matlab", name: "Matlab", type: "devicon" },
 ];
 
 const diplomaStack = [

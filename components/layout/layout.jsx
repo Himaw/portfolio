@@ -1,47 +1,58 @@
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
+
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Loader from "../loading/loader";
 import Color from "../utils/page.colors.util";
 import colors from "/content/index/_colors.json";
-import { Analytics } from "@vercel/analytics/react";
 
+/**
+ * Root layout component.
+ * Manages the initial loading animation, then fades in the full page content.
+ *
+ * The layout shows a full-screen loader for 3 seconds on first mount.
+ * After the loader completes, the main content (Navbar, page children, Footer)
+ * fades in over 0.5 seconds.
+ *
+ * @param {React.ReactNode} children - The active page content to render
+ * @returns {JSX.Element}
+ */
 export default function Layout({ children }) {
-  const [loading, setLoading] = useState(true);
-  const [loading2, setLoading2] = useState(true);
+  // Controls whether the loading screen is shown
+  const [isLoading, setIsLoading] = useState(true);
+  // Controls whether the main content is visible (slightly delayed for fade-in)
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    // Hide the loader after 3 seconds
+    const loaderTimer = setTimeout(() => setIsLoading(false), 3000);
+    // Begin fading in content after 3.2 seconds (slight overlap for smooth transition)
+    const contentTimer = setTimeout(() => setIsContentVisible(true), 3200);
 
     return () => {
-      clearTimeout(timeoutId);
+      clearTimeout(loaderTimer);
+      clearTimeout(contentTimer);
     };
   }, []);
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setLoading2(false);
-    }, 3200);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-  const contentStyle = {
-    opacity: loading2 ? 0 : 1,
+  /** Style applied to the main content wrapper to fade it in */
+  const contentFadeInStyle = {
+    opacity: isContentVisible ? 1 : 0,
     transition: "opacity 0.5s ease",
   };
-  const contentStyle2 = {
+
+  /** Style applied to the navbar during loading — kept fully hidden */
+  const hiddenNavStyle = {
     opacity: 0,
   };
 
   return (
     <div>
-      {loading ? (
+      {isLoading ? (
         <>
           <Color colors={colors} />
-          <div style={contentStyle2}>
+          <div style={hiddenNavStyle}>
             <Navbar />
           </div>
           <main>
@@ -50,7 +61,7 @@ export default function Layout({ children }) {
           </main>
         </>
       ) : (
-        <div style={contentStyle}>
+        <div style={contentFadeInStyle}>
           <Navbar />
           <main>
             {children}

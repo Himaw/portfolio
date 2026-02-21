@@ -19,33 +19,31 @@ import CopyBlock from "../../blocks/about.copy.block";
 import about from "../../../styles/sections/index/about.module.scss";
 
 /**
- * Section: About
- * An overview of yourself.
- * Highlight your top level attributes and disciplines.
+ * About section.
+ * Provides a personal overview with a photo, soft skills copy,
+ * and a research/planning methods badge list.
+ * Adapts the profile image between mobile (fixed dimensions) and desktop (fill).
  *
- * @returns {jsx} <About />
+ * @returns {JSX.Element}
  */
 export default function About() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Define a media query for mobile screens
     const mobileMediaQuery = window.matchMedia("(max-width: 767px)");
 
-    // Function to update isMobile state
-    const handleResize = (event) => {
+    const handleViewportChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Add event listener for changes in screen size
-    mobileMediaQuery.addListener(handleResize);
-
-    // Initialize isMobile state based on the initial screen size
+    // Set initial value based on current viewport
     setIsMobile(mobileMediaQuery.matches);
 
-    // Clean up the event listener on component unmount
+    // Update when the viewport width crosses the 767px breakpoint
+    mobileMediaQuery.addEventListener("change", handleViewportChange);
+
     return () => {
-      mobileMediaQuery.removeListener(handleResize);
+      mobileMediaQuery.removeEventListener("change", handleViewportChange);
     };
   }, []);
 
@@ -64,9 +62,20 @@ export default function About() {
           >
             <div className={about.image}>
               {isMobile ? (
-                <Image src="/img/hima.jpg" width={600} height={800} alt="Himasara Profile Picture" priority />
+                <Image
+                  src="/img/hima.jpg"
+                  width={600}
+                  height={800}
+                  alt="Himasara Profile Picture"
+                  priority
+                />
               ) : (
-                <Image src="/img/hima.jpg" layout="fill" alt="Himasara Profile Picture" priority />
+                <Image
+                  src="/img/hima.jpg"
+                  layout="fill"
+                  alt="Himasara Profile Picture"
+                  priority
+                />
               )}
             </div>
             <div className={about.copy}>
@@ -85,7 +94,6 @@ export default function About() {
                 block="methods"
                 icon="fingerprint"
                 copy="I thrive in the planning and research stage of every project. This is where the seeds of success are sown. I believe in having a crystal-clear vision before embarking on any endeavor."
-                //invertedColor="invertedColor"
                 headerIcon={`${about.icon}`}
               />
             </div>
@@ -96,6 +104,7 @@ export default function About() {
   );
 }
 
+/** Soft-skill methods used in the BadgesBlock */
 const methods = [
   { key: "planet-moon", name: "User Research", type: "fad" },
   { key: "qrcode", name: "Digital Strategy", type: "fad" },

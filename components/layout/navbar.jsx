@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useCallback } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ThemeMode from "../utils/theme.util";
@@ -9,27 +8,32 @@ import content from "../../content/navbar.json";
 import css from "../../styles/structure/navbar.module.scss";
 import logoCss from "../../styles/structure/logo.module.scss";
 
+/**
+ * Navbar component.
+ * Handles navigation links, mobile menu toggle, scroll-based hide/show behaviour,
+ * and route-change menu closing.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Navbar() {
   const router = useRouter();
 
-  const [menuState, menuToggle] = useState();
+  const [isMenuOpen, setIsMenuOpen] = useState();
 
+  // Ensure the menu starts closed on mount
   useEffect(() => {
-    menuToggle(false);
+    setIsMenuOpen(false);
   }, []);
 
+  // Close the mobile menu whenever the route changes
   useEffect(() => {
     class RouteEvents {
       constructor() {
-        // console.log(
-        //   "%c☰  Navigation Router Events Loaded",
-        //   "background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; "
-        // );
         this.addEventListeners();
       }
 
       closeMenu() {
-        menuToggle(false);
+        setIsMenuOpen(false);
       }
 
       addEventListeners() {
@@ -48,14 +52,10 @@ export default function Navbar() {
     };
   }, [router.events]);
 
+  // Hide the navbar when scrolling down past the hero; reveal when scrolling back up
   useEffect(() => {
     class ScrollEvents {
       constructor() {
-        // console.log(
-        //   "%c▼  Navigation Scroll Events Loaded",
-        //   "background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; "
-        // );
-
         window.sticky = {};
         window.sticky.nav = document.querySelector(`nav`);
 
@@ -80,50 +80,38 @@ export default function Navbar() {
         }
       }
 
-      getPosition(e = null, top = true) {
-        let offset;
+      getPosition(element = null, fromTop = true) {
+        if (!element) return;
 
-        if (!e) return;
-
-        if (top) {
-          offset =
-            e.getBoundingClientRect().top +
+        const scrollOffset = fromTop
+          ? element.getBoundingClientRect().top +
+            document.documentElement.scrollTop -
+            window.sticky.nav.at
+          : element.getBoundingClientRect().bottom +
             document.documentElement.scrollTop -
             window.sticky.nav.at;
-          return offset;
-        } else {
-          offset =
-            e.getBoundingClientRect().bottom +
-            document.documentElement.scrollTop -
-            window.sticky.nav.at;
-          return offset;
-        }
+
+        return scrollOffset;
       }
 
       maybeHideNav() {
-        /**
-         * If scrolling down, else if scrolling up
-         *
-         * Add or remove hidden class from filter menu
-         */
-        const nC = window.sticky.nav.classList;
-        // const hero 		= document.querySelector('main > div:first-of-type')
-        // const hiddenAt 	= ( hero ) ? hero.getBoundingClientRect().bottom + window.scrollY : ( window.innerHeight / 2 )
+        const navClassList = window.sticky.nav.classList;
+        // Hide the navbar once the user has scrolled past half the viewport height
         const hiddenAt = window.innerHeight / 2;
 
         if (
           window.scrollY > this.lastY &&
           window.scrollY > hiddenAt &&
-          !nC.contains(css.hidden)
+          !navClassList.contains(css.hidden)
         ) {
-          nC.add(css.hidden);
-        } else if (window.scrollY < this.lastY && nC.contains(css.hidden)) {
-          nC.remove(css.hidden);
+          navClassList.add(css.hidden);
+        } else if (
+          window.scrollY < this.lastY &&
+          navClassList.contains(css.hidden)
+        ) {
+          navClassList.remove(css.hidden);
         }
 
-        /**
-         * At end of every scroll event update the previous position
-         */
         this.lastY = window.scrollY;
       }
     }
@@ -135,28 +123,32 @@ export default function Navbar() {
     };
   }, []);
 
+  /**
+   * Toggles the mobile navigation menu open or closed.
+   */
   const toggleMenu = () => {
-    let bool = !menuState;
-    menuToggle(bool);
+    const nextMenuState = !isMenuOpen;
+    setIsMenuOpen(nextMenuState);
   };
-  function handleScroll(url) {
-    // Find the target element by its ID
-    const element = document.getElementById(url);
+
+  /**
+   * Smoothly scrolls the page to the element with the given ID.
+   *
+   * @param {string} elementId - The ID of the DOM element to scroll to
+   */
+  function scrollToSection(elementId) {
+    const element = document.getElementById(elementId);
 
     if (element) {
-      // Get the element's position relative to the viewport
       const elementRect = element.getBoundingClientRect();
+      const scrollPosition = elementRect.top + window.scrollY;
 
-      // Calculate the scroll position considering any fixed headers or footers
-      const offset = elementRect.top + window.scrollY;
-
-      // Scroll to the calculated position with a smooth behavior
       window.scrollTo({
-        top: offset,
+        top: scrollPosition,
         behavior: "smooth",
       });
     } else {
-      console.error(`Element with ID '${url}' not found.`);
+      console.error(`Element with ID '${elementId}' not found.`);
     }
   }
 
@@ -164,14 +156,14 @@ export default function Navbar() {
     <nav id="Navbar" className={css.container}>
       <ul className={css.menu}>
         <li className={css.menuHeader}>
-          <div className={logoCss.logo} onClick={() => handleScroll("hero")}>
+          <div className={logoCss.logo} onClick={() => scrollToSection("hero")}>
             <span className={logoCss.text}>HimaTheCoder</span>
             <span className={logoCss.dot}>.</span>
           </div>
           <button
             onClick={toggleMenu}
             className={css.mobileToggle}
-            data-open={menuState}
+            data-open={isMenuOpen}
           >
             <div>
               <span></span>
@@ -179,11 +171,11 @@ export default function Navbar() {
             </div>
           </button>
         </li>
-        <li data-open={menuState} className={css.menuContent}>
+        <li data-open={isMenuOpen} className={css.menuContent}>
           <ul>
             {content.map(({ url, title }, index) => {
               return (
-                <li onClick={() => handleScroll(url)} key={index}>
+                <li onClick={() => scrollToSection(url)} key={index}>
                   <a className={css.cursor_change}>{title}</a>
                 </li>
               );
@@ -197,7 +189,7 @@ export default function Navbar() {
       <span
         onClick={toggleMenu}
         className={css.menuBlackout}
-        data-open={menuState}
+        data-open={isMenuOpen}
       ></span>
     </nav>
   );

@@ -7,7 +7,6 @@ import Container from "../../structure/container";
 
 // Section general blocks
 import SectionTitle from "../../blocks/section.title.block";
-import SectionGridBg from "../../blocks/section.grid.block";
 
 // Section specific blocks
 import BadgesBlock from "../../blocks/about.badges.block";
@@ -17,11 +16,11 @@ import CopyBlock from "../../blocks/about.copy.block";
 import about from "../../../styles/sections/index/about.module.scss";
 
 /**
- * Section: Technical
- * Highlight your technical skills with a short blurb about you,
- * Then display the programs you are proficient with and the technologies you use if applicable.
+ * Technical section.
+ * Highlights programming language and technology proficiencies,
+ * plus language (spoken) proficiency.
  *
- * @returns {jsx} <Technical />
+ * @returns {JSX.Element}
  */
 export default function Technical() {
   return (
@@ -74,12 +73,12 @@ export default function Technical() {
             </div>
           </section>
         </Container>
-        {/* <SectionGridBg gridSize={4}/> */}
       </Section>
     </div>
   );
 }
 
+// Programming languages displayed in the skills section
 const software = [
   { key: "java", name: "Java", type: "devicon" },
   { key: "javascript", name: "JavaScript", type: "devicon" },
@@ -94,6 +93,7 @@ const software = [
   { key: "css3", name: "CSS3", type: "devicon" },
 ];
 
+// Frameworks and technologies displayed in the skills section
 const tech = [
   { key: "react", name: "React", type: "devicon" },
   { key: "react", name: "React Native", type: "devicon" },
@@ -106,7 +106,7 @@ const tech = [
   { key: "spring", name: "Spring Boot", type: "devicon" },
   { key: "mongodb", name: "MongoDB", type: "devicon" },
   { key: "express", name: "ExpressJs", type: "express" },
-  { key: "postgresql", name: "Supabse", type: "devicon" },
+  { key: "postgresql", name: "Supabase", type: "devicon" },
   { key: "git", name: "Git", type: "devicon" },
   { key: "docker", name: "Docker", type: "devicon" },
   { key: "google", name: "Google Cloud Platform", type: "devicon" },

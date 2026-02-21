@@ -1,10 +1,10 @@
-// Default core packages
 import { Html, Head, Main, NextScript } from "next/document";
 
 /**
- * Load custom scripts in <Head>
+ * Custom Next.js Document.
+ * Injects favicons, meta tags, and theme-color into the <head> on every page.
  *
- * @returns <Html>
+ * @returns {JSX.Element} Full HTML shell with head and body
  */
 export default function Document() {
   return (
