@@ -157,8 +157,7 @@ export default function Navbar() {
       <ul className={css.menu}>
         <li className={css.menuHeader}>
           <div className={logoCss.logo} onClick={() => scrollToSection("hero")}>
-            <span className={logoCss.text}>HimaTheCoder</span>
-            <span className={logoCss.dot}>.</span>
+            <span className={logoCss.text}>Hima Warnakulasuriya</span>
           </div>
           <button
             onClick={toggleMenu}
