@@ -4,9 +4,15 @@ import hero from "../../../styles/sections/index/hero.module.scss";
 export default function MouseGlow() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [trail, setTrail] = useState({ x: 0, y: 0 });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const requestRef = useRef();
 
   useEffect(() => {
+    const checkTouch = window.matchMedia("(pointer: coarse)").matches;
+    setIsTouchDevice(checkTouch);
+
+    if (checkTouch) return;
+
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -16,6 +22,7 @@ export default function MouseGlow() {
   }, []);
 
   const updateTrail = useCallback(() => {
+    if (isTouchDevice) return;
     setTrail((prevTrail) => {
       const dx = position.x - prevTrail.x;
       const dy = position.y - prevTrail.y;
@@ -25,12 +32,15 @@ export default function MouseGlow() {
       };
     });
     requestRef.current = requestAnimationFrame(updateTrail);
-  }, [position]);
+  }, [position, isTouchDevice]);
 
   useEffect(() => {
+    if (isTouchDevice) return;
     requestRef.current = requestAnimationFrame(updateTrail);
     return () => cancelAnimationFrame(requestRef.current);
-  }, [updateTrail]);
+  }, [updateTrail, isTouchDevice]);
+
+  if (isTouchDevice) return null;
 
   return (
     <>

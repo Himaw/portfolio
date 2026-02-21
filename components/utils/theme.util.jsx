@@ -658,7 +658,10 @@ export default function SetTheme() {
             (this.conf = {
               presetName: "",
               wireframe: !1,
-              density: [0.06, 0.16],
+              density:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? [0.015, 0.04] /* Lower density for mobile to save GPU */
+                  : [0.06, 0.16], /* High density for desktop */
               zoom: 1,
               rotation: 0,
               playing: !0,

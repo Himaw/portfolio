@@ -342,6 +342,11 @@
 		.orbitalBg {
 			width: unset;
 			height: 100%;
+			animation: none;
+		}
+
+		.afterGlowBg {
+			animation: none;
 		}
 	}
 }

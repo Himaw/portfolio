@@ -191,6 +191,14 @@
         right: -180%;
         width: 300%;
         bottom: -55%;
+        animation: none;
+      }
+    }
+
+    .barContainer {
+      .barGradient {
+        animation: none;
+        background-size: 100% 100%;
       }
     }
   }
