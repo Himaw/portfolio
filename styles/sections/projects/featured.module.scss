@@ -169,8 +169,19 @@
 		transform: translateX(50%);
 		filter: blur(200px);
 		opacity: var(--opacity);
-		// background: linear-gradient(180deg, rgb(41, 212, 112) 0%,  rgb(242, 240, 79) 100% );	
 		background: linear-gradient(180deg, var(--neon-1-1) 0%,  var(--neon-1-2) 100% );	
+		animation: pulseGlow 12s ease-in-out infinite alternate;
+	}
+
+	@keyframes pulseGlow {
+		0% {
+			opacity: var(--opacity);
+			transform: translateX(50%) scale(1);
+		}
+		100% {
+			opacity: calc(var(--opacity) + 15%);
+			transform: translateX(50%) scale(1.2);
+		}
 	}
 
 	.orbitalBg {
@@ -195,8 +206,19 @@
 	
 		filter: blur(200px);
 	
-		animation: rotationFore 240s linear infinite;
+		animation: rotationFore 80s linear infinite, scaleOrbital 25s ease-in-out infinite alternate;
 		transform-origin: center center;
+		
+		@keyframes scaleOrbital {
+			0% {
+				transform: scale(1);
+				opacity: 0.8;
+			}
+			100% {
+				transform: scale(1.15);
+				opacity: 1;
+			}
+		}
 		
 	
 		.bgSection {

@@ -1,11 +1,15 @@
 [
   {
     "url": "about",
-    "title": "About Me"
+    "title": "About"
   },
   {
     "url": "carreer",
     "title": "Experience"
+  },
+  {
+    "url": "education",
+    "title": "Education"
   },
   {
     "url": "projects",

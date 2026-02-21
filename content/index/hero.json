@@ -1,7 +1,7 @@
 {
   "intro": {
-    "start": "const Hima = ( name, passion ) =>",
-    "end": "Hello, my name is",
+    "start": "const myInfo = ( name, passion ) =>",
+    "end": "Hi!, my name is",
     "speed": 60,
     "deletionSpeed": 80,
     "wrapper": "h2",
@@ -11,7 +11,7 @@
   },
 
   "header": {
-    "name": "Himasara",
+    "name": "Hima",
     "usp": "I Turn Thoughts into Digital Realities"
   },
 

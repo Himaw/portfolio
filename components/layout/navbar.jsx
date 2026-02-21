@@ -7,6 +7,7 @@ import ThemeMode from "../utils/theme.util";
 import settings from "../../content/_settings.json";
 import content from "../../content/navbar.json";
 import css from "../../styles/structure/navbar.module.scss";
+import logoCss from "../../styles/structure/logo.module.scss";
 
 export default function Navbar() {
   const router = useRouter();
@@ -163,9 +164,10 @@ export default function Navbar() {
     <nav id="Navbar" className={css.container}>
       <ul className={css.menu}>
         <li className={css.menuHeader}>
-          <a className={css.cursor_change} onClick={() => handleScroll("hero")}>
-            {settings.name}
-          </a>
+          <div className={logoCss.logo} onClick={() => handleScroll("hero")}>
+            <span className={logoCss.text}>HimaTheCoder</span>
+            <span className={logoCss.dot}>.</span>
+          </div>
           <button
             onClick={toggleMenu}
             className={css.mobileToggle}

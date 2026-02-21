@@ -6,10 +6,12 @@ import Image from "next/image";
  * /styles/blocks/hero.bg.module.scss
  */
 import hero from "../../../styles/sections/index/hero.module.scss";
+import MouseGlow from "./mouse-glow";
 
 export default function bgColor1() {
   return (
     <div className={`${hero.colorfulV1}`}>
+      <MouseGlow />
       <div className={`${hero.barContainer} noEvents`}>
         <div className={`${hero.barGradient}`}></div>
       </div>

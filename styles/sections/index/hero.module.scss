@@ -123,6 +123,22 @@
         var(--hero-gradient-bg-4) 57%,
         transparent 70%
       );
+      animation: heroRadialPulse 15s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes heroRadialPulse {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 20%;
+    }
+    50% {
+      transform: scale(1.1) translate(-2rem, 2rem);
+      opacity: 35%;
+    }
+    100% {
+      transform: scale(1.05) translate(2rem, -1rem);
+      opacity: 25%;
     }
   }
 
@@ -148,6 +164,7 @@
     opacity: var(--bar-opacity);
     background-blend-mode: var(--bar-blend-mode);
     background: var(--bar-gradient);
+    background-size: 200% 200%;
 
     position: absolute;
     pointer-events: none;
@@ -159,6 +176,13 @@
     height: 100%;
     filter: blur(100px);
     transform: translateZ(0);
+    animation: gradientShift 10s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; opacity: 0.15; }
+    50% { background-position: 100% 50%; opacity: 0.3; }
+    100% { background-position: 0% 50%; opacity: 0.15; }
   }
 
   @include media($max: $mobile) {
@@ -169,6 +193,50 @@
         bottom: -55%;
       }
     }
+  }
+
+  .mouseGlow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 1;
+    transform: translateZ(0);
+    will-change: transform, left, top;
+    
+    &.mouseGlowPrimary {
+      width: 400px;
+      height: 400px;
+      margin-left: -200px;
+      margin-top: -200px;
+      background: radial-gradient(
+        circle,
+        var(--secondary) 0%,
+        transparent 70%
+      );
+      opacity: 0.15;
+      transition: left 0.05s linear, top 0.05s linear;
+    }
+
+    &.mouseGlowSecondary {
+      width: 800px;
+      height: 800px;
+      margin-left: -400px;
+      margin-top: -400px;
+      background: radial-gradient(
+        circle,
+        var(--neon-2-1) 0%,
+        var(--neon-1-2) 40%,
+        transparent 80%
+      );
+      opacity: 0.25;
+      animation: floatBreath 8s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes floatBreath {
+    0% { transform: scale(1) translateZ(0); filter: blur(120px); opacity: 0.2; }
+    100% { transform: scale(1.2) translateZ(0); filter: blur(150px); opacity: 0.3; }
   }
 }
 
