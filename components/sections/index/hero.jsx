@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import Image from "next/image";
 
 import Section from "../../structure/section";
 import Container from "../../structure/container";
@@ -61,7 +62,7 @@ export default function Hero() {
           <section>
             <h1 className={hero.header}>
               {content.header.name}
-              <img className={hero.hima} src="img/hima.png" alt="" />
+              <Image className={hero.hima} src="/img/hima.png" alt="Himasara" width={82} height={82} />
             </h1>
 
             <h1 className={`${hero.header} ${hero.primaryDim}`}>

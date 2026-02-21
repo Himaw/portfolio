@@ -864,13 +864,16 @@ export default function SetTheme() {
 
   return (
     <>
-      <Script id="theme.util.jsx" strategy="beforeInteractive">
-        {`
-				let themeLocalStorage = localStorage.getItem('theme')
-				let themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
-				`}
-      </Script>
+      <script
+        id="theme.util.jsx"
+        dangerouslySetInnerHTML={{
+          __html: `
+            let themeLocalStorage = localStorage.getItem('theme');
+            let themeSystem = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem;
+          `,
+        }}
+      />
       <button
         key="themeToggle"
         onClick={toggleTheme}

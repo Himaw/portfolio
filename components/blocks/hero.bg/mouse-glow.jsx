@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import hero from "../../../styles/sections/index/hero.module.scss";
 
 export default function MouseGlow() {
@@ -15,7 +15,7 @@ export default function MouseGlow() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const updateTrail = () => {
+  const updateTrail = useCallback(() => {
     setTrail((prevTrail) => {
       const dx = position.x - prevTrail.x;
       const dy = position.y - prevTrail.y;
@@ -25,12 +25,12 @@ export default function MouseGlow() {
       };
     });
     requestRef.current = requestAnimationFrame(updateTrail);
-  };
+  }, [position]);
 
   useEffect(() => {
     requestRef.current = requestAnimationFrame(updateTrail);
     return () => cancelAnimationFrame(requestRef.current);
-  }, [position]);
+  }, [updateTrail]);
 
   return (
     <>
